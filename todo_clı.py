@@ -8,6 +8,7 @@ def savecomplated(task):
         file = open(f"{current_date}_dids.txt", "a")
     file.write(str(task) + "\n")
     file.close()
+    
 def delcomplated(missions, compmissions):
     while True:
         try:
