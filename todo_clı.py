@@ -1,6 +1,7 @@
 from datetime import datetime
 date = datetime.now()
 current_date = date.date()
+
 def save_completed_task(task):
     try:
         file = open(f"{current_date}_dids.txt", "x")
