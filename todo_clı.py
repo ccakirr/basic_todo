@@ -1,3 +1,13 @@
+from datetime import datetime
+date = datetime.now()
+current_date = date.date()
+def savecomplated(task):
+    try:
+        file = open(f"{current_date}_dids.txt", "x")
+    except FileExistsError:
+        file = open(f"{current_date}_dids.txt", "a")
+    file.write(str(task) + "\n")
+    file.close()
 def delcomplated(missions, compmissions):
     while True:
         try:
@@ -7,10 +17,12 @@ def delcomplated(missions, compmissions):
             continue
         if comp not in missions:
             print("Please enter a valid mission number.\n")
-            return
+            continue
         compmissions[comp] = missions[comp]
         missions.pop(comp)
+        savecomplated(compmissions[comp])
         print(f"Mission {comp} completed!\n")
+        break
 
 def main():
     countofmis = int(input("Please enter the count of today's missions.\n"))
