@@ -59,7 +59,7 @@ Python 3.8 or higher
 
 ## Run the Project
 Clone the repository:
-git clone https://github.com/your-username/task-manager-cli.git
+git clone https://github.com/ccakirr/basic_todo
 
 Navigate to the project folder:
 cd task-manager-cli
